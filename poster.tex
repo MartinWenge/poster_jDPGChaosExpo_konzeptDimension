@@ -116,7 +116,7 @@ text margin right=0pt,%
 
 
 %% replace altert{xx} command :
- %  "(\ \textcolor{IPFred}{.*?} )"  -->  " $1 "
+ %  "(\ \textcolor{IPForange}{.*?} )"  -->  " $1 "
 
 %%--------------------------------------------------------------------------%%
 %% content
@@ -127,44 +127,56 @@ text margin right=0pt,%
 % first column
 \begin{myCol}
   \begin{textblock}{Was ist die Dimension?}
-    \renewcommand{\baselinestretch}{1.4}
-
-    {\large \textbf{  \textcolor{IPFred}{Intuitiv} } ist klar welche Dimension $D$ ein \textit{einfaches} geometrisches Objekt besitzt}\\
+    \renewcommand{\baselinestretch}{1.2}
+    \Large
+    \textbf{  \textcolor{IPForange}{Intuitiv} } klar welche Dimension ein \textit{einfaches} geometrisches Objekt besitzt\\
     \begin{center}
-      \hspace*{-1.5cm}\includegraphics[width=0.8\textwidth]{fig/bsp}\vspace*{-1.5cm}
+      \includegraphics[width=0.96\textwidth]{fig/bsp}
     \end{center}
+    Welche \textit{Länge} hat eine Kugel? Welches \textit{Volumen} hat ein Rechteck? \\
+    \textcolor{IPForange}{$\boldsymbol{\Rightarrow}$} \textbf{Größenmaß} passt nicht zu \textbf{Objekt} \\
+    Größe eines Objektes nur sinnvoll definiert im Bezug auf seine Dimension\\[1cm] % $\boldsymbol{ D_\text{f}}$\\[2cm]
+    \textbf{  \textcolor{IPForange}{Mathematisch} } muss die Dimension $D$ eindeutig formuliert werden
+    \begin{minipage}[c]{0.7\textwidth}
+      \begin{itemize} \setlength\itemsep{1.1em} \Large
+        \item Ausgangsfrage: Wie groß ist Dimension des Raumes, den Objekt ausf\"ullt ? 
+        \item typische Ausdehnung $r$ : Abmessung in einer Richtung\\[2cm]
+        \begin{itemize}\setlength\itemsep{1.3em} \Large 
+          \item \textit{ Gr\"o\ss e} einer \textbf{Linie}   $l \sim r$
+          \item \textit{ Gr\"o\ss e} eines \textbf{Kreises} $A \sim r^2$
+          \item \textit{ Gr\"o\ss e} einer \textbf{Kugel}   $V \sim r^3$\\[1.2em]
+          \textcolor{IPForange}{$\boldsymbol{\Rightarrow}$} \textbf{allgemein: $G_\text{d} \sim r^d$}
+        \end{itemize}
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.29\textwidth}
+      \begin{center}
+        \includegraphics[width=0.99\textwidth]{fig/groessen}
+      \end{center}
+    \end{minipage}
+    
     \begin{center}
-      \textit{ Gr\"o\ss e} eines Objektes nur sinnvoll definiert im Bezug auf seine Dimension $D$\\
-      $\boldsymbol{\Rightarrow}$ Unsinnig zu fragen welche \textit{L\"ange} eine Kugel oder welches \textit{Volumen} ein Rechteck hat
-    \end{center}\vspace*{0.6cm}
-    {\large \textbf{  \textcolor{IPFred}{Mathematisch} } muss die Dimension $D$ eindeutig formuliert werden}\vspace*{0cm}\\
-    \begin{center}
-      \begin{itemize}
-        \item Ausgangsfrage: Wie gro{\ss} ist die Dimension des Raumes, den das Objekt ausf\"ullt ? 
-        \item typische lineare Ausdehnung $r$ : Abmessung in einer Richtung\\
-      \end{itemize}\vspace*{0.4cm}
-      $\Rightarrow$ \textit{ Gr\"o\ss e} eines Kreises $\sim r^2$\hspace*{1.5cm}\textit{ Gr\"o\ss e} einer Kugel $\sim r^3$\hspace*{1.5cm} \textcolor{IPFred}{Allgemein $\sim r^D$} \\\vspace*{0.8cm}
-      \textbf{  \textcolor{IPFred}{Idee:} }Wie viele Kopien $N$ braucht man, f\"ur doppelte Gr\"o\ss e $G\,$?\\
+      \textbf{  \textcolor{IPForange}{Idee:} }Wie viele Kopien $N$ braucht man, f\"ur doppelte Gr\"o\ss e $G\,$?\\
       $\Rightarrow$ $G\to2\,G$\hspace*{1.5cm}durch\hspace*{1.5cm}$N=2^D$ Kopien
     \end{center}
-    \vspace*{-1.0cm}
-    \begin{center}
-    \includegraphics[width=0.8\textwidth]{fig/natD}\\
-    \begin{minipage}[c]{0.2\textwidth}
-      \centerline{  \textcolor{IPFred}{Allgemein} }
-      \centerline{  \textcolor{IPFred}{Hausdorff Dimension} }
-    \end{minipage}
-    \hspace*{1cm}
-    \begin{minipage}[c]{0.01\textwidth}\vspace*{-0.5cm}
-      {\LARGE :}
-    \end{minipage}
-    \begin{minipage}[c]{0.5\textwidth}
+
+    \includegraphics[width=1.01\textwidth]{fig/natD}\\[1.5cm]
+
+    \begin{minipage}[c]{0.4\textwidth}\
+      \textcolor{IPForange}{Allgemein} \\
+      \textcolor{IPForange}{\textbf{Hausdorff Dimension}} 
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.01\textwidth}
+      {\Huge :}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.58\textwidth}
       \begin{center}
         F\"ur die $n$-fache Vergr\"o\ss erung des Objekts:\\
         $\boldsymbol{G\to n\,G}$ ben\"otigt man $\boldsymbol{N=n^D}$ Kopien
       \end{center}
     \end{minipage}
-  \end{center}
+
 
   \end{textblock}
   %%--------------------------------------------------------------------------%%
@@ -183,47 +195,65 @@ text margin right=0pt,%
 %%--------------------------------------------------------------------------%%
 
   \begin{textblock}{Fraktale Dimensionen}
-  \begin{itemize}
-    \item F\"ur kompliziertere oder allgemeinere Objekte ist diese Definition von $D$ sehr n\"utzlich
-    \item Verallgemeinerung des Begriffs Dimension auf\,  \textcolor{IPFred}{nicht-ganzzahlige} \,Werte
+    \Large
+  \begin{itemize} \setlength\itemsep{1.1em} \Large
+    \item F\"ur kompliziertere oder allgemeinere Objekte \\
+    \hspace*{4cm}fraktale \textbf{Haussdorf Dimension} $D_\text{f}$ sehr n\"utzlich
+    \item Verallgemeinerung Dimensionsbegriff auf \textcolor{IPForange}{\textbf{nicht-ganzzahlige}} Werte
   \end{itemize}
-  \centerline{Aus   \textcolor{IPFred}{$N=n^D$}  folgt, dass   \textcolor{IPFred}{$\ln N=D\,\ln n$}  und somit   \textcolor{IPFred}{$D=\frac{\ln N} {\ln n}$}, also}\vspace*{-0.3cm}
-    {\large
-      \begin{align*}
-        \color{IPFred} D \sim \frac{\ln N(n)} {\ln n}
-      \end{align*}
-    }
-  \begin{minipage}[c]{0.22\textwidth}
-    \centerline{ \textbf{ Koch-Kurve}}\vspace*{2.5cm}
-    \includegraphics[width=0.99\textwidth]{fig/Koch3}
+  \vspace*{1.5cm}
+  Aus \textcolor{IPForange}{$N=n^D$} folgt, dass \textcolor{IPForange}{$\ln N=D\,\ln n$}  und somit:
+  \begin{align*}
+    \color{IPForange}{\boldsymbol{ D \simeq \frac{\ln N(n)} {\ln n}}}
+  \end{align*}
+
+  \begin{minipage}[t]{0.38\textwidth}
+    \begin{center}
+      \textbf{Koch-Kurve}\\[1cm]
+      \includegraphics[width=0.9\textwidth]{fig/Koch3}
+    \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.58\textwidth}
+    \vspace*{1.5cm}
+    \textbf{ Konstruktion:}
+    \begin{itemize} \setlength\itemsep{1.1em} \Large
+      \item Schneide mittleres Drittel einer Linie aus
+      \item Setze zwei Geraden als Zacke hinein
+      \item Wiederholen an allen Geraden $\to\infty$
+      \item \textcolor{IPForange}{$\rightarrow$} nach jedem Schritt ist Kurve um\\
+      den Faktor $4/3$ l\"anger
+      \item \textcolor{IPForange}{$\Rightarrow$} \textbf{unendlich lang}, aber auf \textbf{endliche Fläche beschränkt}
+      \item \textit{Zoomen} zeigt immer gleiche Struktur\\[1.2em]
+      \textcolor{IPForange}{\textbf{$\Rightarrow$}} Objekt ist \textcolor{IPForange}{\textbf{ selbst\"ahnlich}}
+    \end{itemize}
+    Gr\"o\ss e der Koch-Kurve wird ver-\textcolor{IPForange}{\textbf{drei}}-facht indem \textcolor{IPForange}{\textbf{vier}} Kopien konsturiert werden
+    \begin{align*}
+      {\color{IPForange}{\boldsymbol{\Rightarrow}}} {\color{IPFred}{ D }} =\frac{\ln 4}{\ln 3}\approx  \color{IPFred}{1,26}
+    \end{align*}
   \end{minipage}
-  \begin{minipage}[c]{0.29\textwidth}
-    \centering
-    \textbf{ Konstruktion:}\\\vspace*{0.5cm}{\normalsize
-    Schneide mittleres Drittel einer Linie aus und setze daf\"ur 2 solcher St\"ucke zu einem Zacken zusammen (immer wieder $\to\infty$)\\
-      \textcolor{IPFred}{$\Rightarrow$} Da nach jedem Schritt die Kurve um Faktor $\frac{ 4}{ 3}$ l\"anger wird ist sie am Ende unendlich lang, bleibt aber auf 
-    gleiche Fl\"ache beschr\"ankt\\
-    \textcolor{IPFred}{\textbf{ Zoomen}} zeigt immer gleiche Struktur
-      \textcolor{IPFred}{\textbf{$\Rightarrow$}} Objekt ist \textcolor{IPFred}{\textbf{ selbst\"ahnlich}}  \textcolor{IPFred}{\textbf{ !} } \\
-      \textcolor{IPFred}{\textbf{ ?} }$1\leq D\leq2$, aber $D=...$  \textcolor{IPFred}{\textbf{ ?} }\\\vspace*{0.3cm}
-    Man kann die Gr\"o\ss e der Koch-Kurve ver-  \textcolor{IPFred}{drei} -fachen indem man  \textcolor{IPFred}{vier} Kopien konstruiert\\
-      \textcolor{IPFred}{\textbf{$\Rightarrow$}}   $\textcolor{IPFred}{D} =\frac{\ln 4}{\ln 3}\approx  \textcolor{IPFred}{1,26} $
-    }
-  \end{minipage}\hspace*{0.7cm}
-  \begin{minipage}[c]{0.29\textwidth}
-    \centering
-    \textbf{ Konstruktion:}\\\vspace*{0.5cm}{\normalsize
-    Schneide aus einem Dreieck (schwarz) das zentrale, viertelst so gro\ss e, Dreieck aus und wieder aus den entstehenden schwarzen Dreiecken das zentrale (immer wieder)\\
-      \textcolor{IPFred}{$\Rightarrow$} Am Ende hat man einen \textcolor{IPFred}{selbst\"ahnlichen}\textit{ Flickenteppich}\\
-    Jeder Schritt hat Fl\"ache um Faktor $\frac{ 3}{ 4}$ reduziert\\\vspace*{0.1cm}
-      \textcolor{IPFred}{\textbf{$\Rightarrow$}}  \textcolor{IPFred}{\textbf{ !} }Seine Fl\"ache wird  \textcolor{IPFred}{\textbf{ null} }\\und deshalb muss $D<2$ sein  \textcolor{IPFred}{\textbf{ !} }\\\vspace*{0.3cm}
-    Man kann die Gr\"o\ss e des Sierpinski-Dreiecks ver-  \textcolor{IPFred}{zwei} -fachen indem man  \textcolor{IPFred}{drei} Kopien konstruiert\\
-      \textcolor{IPFred}{\textbf{$\Rightarrow$}} $  \textcolor{IPFred}{D} =\frac{\ln 3}{\ln 2}\approx  \textcolor{IPFred}{1,58} $\vspace*{0cm}
-    }
-    \end{minipage}\hspace*{-2.2cm}
-    \begin{minipage}[c]{0.21\textwidth}\vspace*{-6.5cm}
-    \centerline{\textbf{ Sierpinski-Dreieck}}\vspace*{1cm}\hspace*{1.6cm}
-    \includegraphics[width=0.48\textwidth]{fig/sierpinski2}
+
+  \begin{minipage}[c]{0.58\textwidth}
+    \vspace*{1.0cm}
+    \textbf{ Konstruktion:}
+    \begin{itemize} \setlength\itemsep{1.1em} \Large
+      \item Schneide von geviertelten Dreieck das Zentrale heraus
+      \item Wiederhole mit neuen Dreiecken $\to\infty$
+      \item \textcolor{IPForange}{$\rightarrow$} jeder Schritt reduziert die Fläche\\
+      um den Faktor $3/4$
+      \item \textcolor{IPForange}{$\Rightarrow$} Fläche geht \textbf{gegen null}, aber Objekt hat \textbf{unendlichen Rand}
+      \textcolor{IPForange}{\textbf{$\Rightarrow$}} Objekt ist ein \textcolor{IPForange}{\textbf{ selbst\"ahnlicher}}\textit{ Flickenteppich}\\[1.2em]
+    \end{itemize}
+      Gr\"o\ss e des Sierpinski-Dreiecks wird ver-\textcolor{IPForange}{\textbf{zwei}}-facht indem \textcolor{IPForange}{\textbf{drei}} Kopien konsturiert werden
+      \begin{align*}
+        {\color{IPForange}{\boldsymbol{\Rightarrow}}} {\color{IPFred}{ D }} =\frac{\ln 3}{\ln 2}\approx  \color{IPFred}{1,58}
+      \end{align*}
+    \end{minipage}
+    \begin{minipage}[c]{0.35\textwidth}
+      \begin{center}\vspace*{-5cm}
+        \textbf{ Sierpinski-Dreieck}\\[1cm]
+        \includegraphics[width=0.5\textwidth]{fig/sierpinski2}
+      \end{center}
+
   \end{minipage}
   %\end{center}
 
